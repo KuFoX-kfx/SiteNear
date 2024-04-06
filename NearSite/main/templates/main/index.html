@@ -1,0 +1,161 @@
+{% if messages %}
+        	{% for message in messages %}
+          	<div class="alert alert-{{ message.tags }}">
+            	{{ message }}
+          	</div>
+        	{% endfor %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление доставкой изделий</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(211, 137, 39);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #444;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(211, 137, 39);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.photo_work {
+    text-align: center;
+    width: 90%;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+a.glo{
+ color:rgb(211, 137, 39);
+ padding: 10px 20px;
+ width:80%;
+ text-decoration:none;
+ text-align:center;
+ margin:20px auto;
+ display: block;
+ background-image: linear-gradient(to left,transparent,transparent 50%,rgb(211, 137, 39) 50%,rgb(211, 137, 39));
+ background-position: 100% 0;
+ background-size: 200% 100%;
+ transition: all .25s ease-in;
+ font: 400 18px tahoma;
+ border: 1px solid rgb(211, 137, 39)
+}
+a.glo:hover {
+background-position: 0 0;
+color:#fff;
+}
+
+.menu{
+	list-style: none;
+	position: absolute;
+	top: 10px;
+	right: 2%;
+    color: #ffffff;
+}
+.welcome {
+    color: #ffffff;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Near your house</h1>
+    </header>
+    <div class="welcome">
+        <ul class = "menu">
+		<li><a class="welcome" href = "{% url 'register' %}">Регистрация</a></li>
+        <br/>
+		<li><a class="welcome" href = "{% url 'signup' %}">Войти</a></li>
+</ul>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="delivery.html">Заказать</a></li>
+            <li><a href="map.html">Карта</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Содержимое страницы -->
+        <speacer>
+            <br />
+            
+            <div class="center">
+                <img class="photo_work" src="empresas_00.webp" alt="Производство">
+            </div>
+            <a href="#" class="glo">Сделать заказ</a>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+        </speacer>
+    </main>
+    <footer>
+        <p>&copy; 2024 Управление доставкой изделий</p>
+    </footer>
+</body>
+</html>
